@@ -9,7 +9,7 @@ pipeline {
         stage('Checkout SCM'){
             steps{
                 script{
-                    //Generate  using pipeline syntax
+                    checkout scmGIT(branches:[[name:'*/master']], extensions: [], userRemoteConfigs: [[url:'https//github.com/sandy6478/CICD-Terraform-EKS-Nginx.git']])
                 }
             }
         }
